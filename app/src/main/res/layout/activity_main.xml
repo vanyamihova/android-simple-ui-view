@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f2f2f2">
+
+    <!-- TOOLBAR LAYOUT -->
+    <Toolbar
+        android:id="@+id/toolbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00aeef">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/nav_tsi_logo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:text="AirPro Mobile"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/probes_actionbar_logging"
+                android:layout_marginRight="15dip"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/probes_actionbar_bluetooth"
+                android:layout_marginRight="15dip"
+                />
+
+        </LinearLayout>
+
+    </Toolbar>
+
+    <!-- TABS LAYOUT -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00aeef"
+        android:orientation="horizontal" >
+
+        <!-- TAB PROBES -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="7dp"
+                android:src="@drawable/nav_tab_probes"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Probes"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <!-- TAB WORKFLOWS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="7dp"
+                android:src="@drawable/nav_tab_workflows"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Workflows"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <!-- TAB DATA FILES -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="7dp"
+                android:src="@drawable/nav_tab_datafiles"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data Files"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- TEXT: Standard air density -->
+    <TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        android:text="Standard air density"
+        android:textAllCaps="true"
+        android:textColor="#887a73"
+        android:textSize="13sp" />
+
+    <!-- CARD LAYOUT -->
+    <android.support.v7.widget.CardView
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <!-- VTHCharlie -->
+            <TextView
+                android:id="@+id/txt_vth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:text="VTHCharlie"
+                android:textSize="15sp"
+                android:textColor="@android:color/black" />
+
+            <!-- ABC1245678-->
+            <TextView
+                android:id="@+id/txt_abc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_vth"
+                android:layout_alignLeft="@id/txt_vth"
+                android:text="ABC1245678"
+                android:textSize="14sp"
+                android:textColor="#7b818d" />
+
+            <!-- ICON SETTINGS -->
+            <ImageView
+                android:id="@+id/icon_settings"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_alignBottom="@id/txt_abc"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/probes_card_probe_settings" />
+
+            <!-- ICON BATTERY -->
+            <ImageView
+                android:id="@+id/icon_battery"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@id/icon_settings"
+                android:layout_alignTop="@id/icon_settings"
+                android:src="@drawable/probes_card_batt_3" />
+
+            <!-- ICON SD CARD -->
+            <ImageView
+                android:id="@+id/icon_sd_card"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@id/icon_battery"
+                android:layout_alignTop="@id/icon_battery"
+                android:src="@drawable/probes_card_sd_inserted" />
+
+            <RelativeLayout
+                android:id="@+id/layout_flow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="30dp"
+                android:gravity="center"
+                android:layout_below="@id/icon_settings">
+
+                <!-- ICON FLOW -->
+                <ImageView
+                    android:id="@+id/icon_flow"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/meas_primary_flow" />
+
+                <!-- TEXT 1234 -->
+                <TextView
+                    android:id="@+id/text_1234"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_toRightOf="@id/icon_flow"
+                    android:text="1234"
+                    android:textSize="58sp"
+                    android:textColor="@android:color/black" />
+
+                <!-- TEXT cfm -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/text_1234"
+                    android:layout_below="@id/text_1234"
+                    android:text="cfm"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+            </RelativeLayout>
+
+            <!-- ICON TARGET -->
+            <ImageView
+                android:id="@+id/icon_target"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/layout_flow"
+                android:layout_alignLeft="@id/txt_vth"
+                android:src="@drawable/probes_card_targetbtn" />
+
+            <!-- TEXT 36 in -->
+            <TextView
+                android:id="@+id/text_36_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/icon_target"
+                android:layout_alignBottom="@id/icon_target"
+                android:layout_alignRight="@id/icon_settings"
+                android:gravity="center"
+                android:layout_marginLeft="15dp"
+                android:text="36 in"
+                android:textSize="15sp"
+                android:textColor="@android:color/black" />
+
+            <!-- ICON DUCT CIRCULAR -->
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toLeftOf="@id/text_36_in"
+                android:layout_alignTop="@id/text_36_in"
+                android:src="@drawable/probes_card_duct_circular" />
+
+            <View
+                android:id="@+id/line_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d2d2d2"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/icon_target" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line_horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- CELL VELOCITY -->
+                    <RelativeLayout
+                        android:layout_width="90dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="10dp">
+
+                        <ImageView
+                            android:id="@+id/icon_velocity"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginTop="4dp"
+                            android:src="@drawable/meas_secondary_velocity" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="85"
+                            android:textSize="30sp"
+                            android:layout_alignTop="@id/icon_velocity"
+                            android:layout_toRightOf="@id/icon_velocity" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ft/min"
+                            android:textSize="15sp"
+                            android:layout_toRightOf="@id/icon_velocity"
+                            android:layout_below="@id/icon_velocity" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="#d2d2d2"
+                            android:layout_alignParentRight="true" />
+
+                    </RelativeLayout>
+
+
+                    <!-- CELL RELHUMIDITY -->
+                    <RelativeLayout
+                        android:layout_width="90dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="10dp">
+
+                        <ImageView
+                            android:id="@+id/icon_relhumidity"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginTop="4dp"
+                            android:src="@drawable/meas_secondary_relhumidity" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="36"
+                            android:textSize="30sp"
+                            android:layout_alignTop="@id/icon_relhumidity"
+                            android:layout_toRightOf="@id/icon_relhumidity" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="% rh"
+                            android:textSize="15sp"
+                            android:layout_toRightOf="@id/icon_relhumidity"
+                            android:layout_below="@id/icon_relhumidity" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="#d2d2d2"
+                            android:layout_alignParentRight="true" />
+
+                    </RelativeLayout>
+
+
+                    <!-- CELL TEMPERATURE -->
+                    <RelativeLayout
+                        android:layout_width="110dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="10dp">
+
+                        <ImageView
+                            android:id="@+id/icon_temperature"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginTop="4dp"
+                            android:src="@drawable/meas_secondary_temperature" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="76.8"
+                            android:textSize="30sp"
+                            android:layout_alignTop="@id/icon_temperature"
+                            android:layout_toRightOf="@id/icon_temperature" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="F"
+                            android:textSize="15sp"
+                            android:layout_toRightOf="@id/icon_temperature"
+                            android:layout_below="@id/icon_temperature" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="#d2d2d2"
+                            android:layout_alignParentRight="true" />
+
+                    </RelativeLayout>
+
+
+                    <!-- CELL BARPRESSURE -->
+                    <RelativeLayout
+                        android:layout_width="90dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="10dp">
+
+                        <ImageView
+                            android:id="@+id/icon_barpressure"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginTop="4dp"
+                            android:src="@drawable/meas_secondary_barpressure" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="36"
+                            android:textSize="30sp"
+                            android:layout_alignTop="@id/icon_barpressure"
+                            android:layout_toRightOf="@id/icon_barpressure" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="bar"
+                            android:textSize="15sp"
+                            android:layout_toRightOf="@id/icon_barpressure"
+                            android:layout_below="@id/icon_barpressure" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="#d2d2d2"
+                            android:layout_alignParentRight="true" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>
