@@ -2,4 +2,7 @@
 
 This is only UI project
 
-![alt tag](https://drive.google.com/file/d/0B1oAs1_zJ1qMRjBPYkNETVk0N0k/view?usp=sharing)
+<p>
+  <img src="./DEMO/homework-lecture-2.png" width="350">
+</p>
+
