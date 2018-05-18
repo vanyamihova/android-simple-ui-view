@@ -1,4 +1,4 @@
-# homework-lecture-2
+# Simple UI view
 
 This is only UI project
 
